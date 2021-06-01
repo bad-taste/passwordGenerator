@@ -14,12 +14,15 @@ namespace passwordGenerator
             object[] additionalParameters = { arraySymbols, arrayNumbers, arraySpecialSymbols };
             string generatedPassword = "";
 
-
-            int i;
+            Console.WriteLine("Password Generator tool");
             Console.Write("Please enter the number of symbols in your password: ");
             int passwordDifficulty = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Did you need special symbols in your password? Y or N");
+            Console.WriteLine("Did you need numbers in your password? Y or N");
 
-            for(i = 0; i <= passwordDifficulty; i++)
+            
+
+            for(int i = 0; i <= passwordDifficulty; i++)
             {
                 Random rand = new Random();
                 int symbolType = rand.Next(additionalParameters.Length);
